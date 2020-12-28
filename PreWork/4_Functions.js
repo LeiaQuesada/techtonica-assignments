@@ -12,34 +12,62 @@
 
 // Exercise 1. Define a function called logGreeting() that prints the string “Hello!” (use console.log). 
 // Underneath the function, write the line of code that runs the function. 
-
+function logGreeting() {
+  console.log("Hello!");
+};
+logGreeting();
 
 // Exercise 2. Define a function called getName() that *returns* a string that is your name. 
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function. 
-
+function getName() {
+  return "Leia";
+};
+console.log(getName());
 
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2() 
 // that prints a full sentence that contains your name: "Hello! My name is <name>."
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2(). 
-
+function logGreetins2() {
+  console.log("Hello! My name is", getName());
+};
+logGreeting2();
 
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
 // The function should return the sum of the 3 numbers.
 // Then write some function calls you would use to test your function.
-
+function sum(num1, num2, num3) {
+  return num1 + num2 + num3;
+};
+sum(4, 19, 54);
+sum(10, 12, 15);
+sum(-1, 5, 7);
 
 // Exercise 5. Let's say a museum gives a discount for children ages 14 or under, and seniors 65 or older.
 // Write a function that takes in a person's age and returns true if they should get a discount.
 // Otherwise it should return false.
 // Then write some function calls you would use to test your function.
-
+function discount(age) {
+  if (age <= 14 || age >= 65) {
+    return true;
+  } else {
+    return false;
+  };
+};
+discount(68);
+discount(18);
 
 // Exercise 6. Write a function that takes 2 parameters -- one number and one string.
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
-
+function repeat(num, str) {
+  for (let i = 0; i < num; i++) {
+    console.log(str);
+  };
+};
+repeat(2, "Let's celebrate each other's wins!");
+repeat(5, "Hooray!");
 
 // Exercise 7. Read the following code (don't run it yet)
 function mysteryFunction1(p1) {
@@ -51,11 +79,11 @@ function mysteryFunction1(p1) {
   console.log("The value of z is " + z);
   
   // Without running the code, write down in a comment:
-  // 1. What mysteryFunction1 does 
-  // 2. What prints out for the value of y
-  // 3. What prints out for the value of z
+  // 1. What mysteryFunction1 does: it doubles the number passed as an argument
+  // 2. What prints out for the value of y = 4
+  // 3. What prints out for the value of z = 8
   // Now run the code and see if you're correct.
-  // Were you correct? If not, what did you learn?
+  // Were you correct? If not, what did you learn? Yes, I was correct :)
   
   
   
@@ -70,11 +98,11 @@ function mysteryFunction1(p1) {
   console.log("The value of b is " + b);
   
   // Without running the code, write down in a comment:
-  // 1. What mysteryFunction2 does 
-  // 2. What prints out for the value of a
-  // 3. What prints out for the value of b
+  // 1. What mysteryFunction2 does = takes 2 given numbers, declares the calculation of the first num minus the second as constant variable x, then returns x
+  // 2. What prints out for the value of a = 6
+  // 3. What prints out for the value of b = 5
   // Now run the code and see if you're correct.
-  // Were you correct? If not, what did you learn?
+  // Were you correct? If not, what did you learn? Yes, correct again. Yay!
   
   
   // Exercise 9. This exercise is to practice reading the documentation for functions.
@@ -84,19 +112,22 @@ function mysteryFunction1(p1) {
   
   // Here's a string I made representing my grocery list.
   // Using split() and groceryList, make an array of my grocery list items
-  const groceryList = "eggs,carrots,orange juice"
+  const groceryList = "eggs,carrots,orange juice";
+  let groceryItems = groceryList.split(",");
   
   // Here's a string I made representing my morning schedule.
   // Using split() and mySchedule, make an array of the *first 2* things I do in the morning
   // There are multiple ways to do this, but try doing it using only the split() function.
-  const mySchedule = 'wake up--->brush teeth--->eat breakfast--->go to work'
-  
+  const mySchedule = 'wake up--->brush teeth--->eat breakfast--->go to work';
+  let arr = [];
+  arr.push(mySchedule.split("--->")[0], mySchedule.split("--->")[1]);
+
   
   
   // Congrats, you made it to the end!
   // Did you find this easy or hard? If you used references, which ones helped you? 
   // Please answer in a comment below.
-  //
+  // This was fun practice and memory jogging on Javascript arrays, no references needed.
   
   // Email your file to the course staff, 
   // or commit your file to GitHub and email us a link.
