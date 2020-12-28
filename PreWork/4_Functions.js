@@ -29,7 +29,7 @@ console.log(getName());
 // that prints a full sentence that contains your name: "Hello! My name is <name>."
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2(). 
-function logGreetins2() {
+function logGreeting2() {
   console.log("Hello! My name is", getName());
 };
 logGreeting2();
