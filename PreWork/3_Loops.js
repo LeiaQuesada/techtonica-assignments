@@ -141,8 +141,15 @@ for (let num = 0; num <= 100; num++) {
 // But in real life, how would you decide which type of loop to use? You might not have an
 // exact answer, but spend a few minutes thinking about the different types of loops and/or 
 // doing some research and write down your thoughts in a comment below:
-//
-how would you decide which type of loop to use
+/* 
+I prefer the 'for' loop because the initialization variable is declared with the condition and 
+final expression all in one place, so it's easier to read and understand what is expected, 
+whereas the while and do while loop have these elements formatted throughout the loop statement. 
+
+If I needed to run a repetivtive block at least once before checking a condition, I would use the 'do while' loop
+otherwise the 'for' loop is easiest to read and manage for me. I would also use the do while and while loop if I
+were to utilize a global variable in my loop.
+*/
 
 // Exercise 11. Now we'll practice using nested loops (a loop inside another loop)!
 // Update the nested loops below to so that for each value of outsideCounter,
