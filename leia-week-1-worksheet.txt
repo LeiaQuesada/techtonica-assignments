@@ -1,0 +1,34 @@
+1. How do you plan on exhibiting professionalism at Techtonica? What would be different in a full-time engineering job setting?
+Respectfully listen and communicate with consideration of others when sharing thoughts. No difference.
+2. What would you do if you just found out you are going to be an hour late tomorrow morning?
+I would make sure to let everyone affected know as soon as possible via slack channel, including my SEAM.
+3. What would you do if you realized that you only had time to finish most of your work by the due date of a group project?
+I would let my group know where I am finding difficulties and where I'm struggling as well as my concern for possibly not finishing all my responsibilites. I would ask for help/guidance from my group, SEAM and any available mentors after first investigating where I believe I need help so I can ask specific questions.
+4. Knowing yourself, what are the most effective ways for you to learn and retain new information?
+The Learning to Learn test showed that I am a visual learner, it is recommended that I use flashcards to help with retaining information and to consider watching how things are done - youtube is a great resource for visually observing interpretations of processes. 
+5. What is growth mindset?
+To accept that failure is part of the growth process, to accept challenges that come up as new ways to restrategize processes. To stay encouraging, curious, with remembering through continued practice we can improve anything.
+6. Which operating system are you using right now? Name two other popular operating systems.
+MacOS, other popular ones are Windows and Linux.
+7. Why do computers need operating systems?
+To be able to manage hardware and software processes and optimize their transactions - which process has priorities (niceness level), how much of the hardware is needed for each process and when. Computer programs(Software) need to access the hardware (CPU, memory & battery), the OS(software) manages the processes between them to optimize their transactions(requests and reponses).
+8. Explain what you would do if you felt stuck on a coding problem.
+Google specific tasks that I'm trying to execute, check through FreeCodeCamp, StackOverFlow, MDN or other documentation, other online resources such as Twitter, lastly propose my struggle to my cohort, ask specific clarifying questions to my mentor, if necessary.
+9. Describe the ways you plan on meeting and staying connected with new people in tech this month.
+I plan to attend Hackathons as well as meetups, add connections on LinkedIn, ask new connections what brought them into their current field, what do they love most about what they are currently doing, what would they want to improve about their current tasks, any questions that I would be curious about. If I wanted to request assistance, I would ask how they learned something or if they could point me to someone who might be able to share tips.
+10. Describe some examples of effective body language and what is communicated when they are used well.
+Open arms and feet planted at shoulder width stance create a feeling of approachability, whereas arms folded and legs crossed are perceived as unwelcoming and unreceptive.
+11. Describe some examples of effective word choice and what is communicated when they are used well.
+Mutual purpose and respect is reflected when you use positive interactions that center around asking for collaboration such as “would you please, would you mind”.
+12. How can you build trust in a team?
+Be open, vulnerable, accountable, practice and encourage open communication.
+13. How are the devices on the internet physically connected to each other?
+Wires(copper wire), cables(fiber optic), and wifi (radiowaves).
+14. How is information physically transmitted from device to device?
+Bytes transferred via electricity, light and radiowaves.
+15. How does one device find another it’s trying to communicate with?
+Internet Protocol Addresses and the Domain Name System.
+16. What methods do devices on the internet use to communicate?
+Internet Protocol, information is broken into Packets which are routed by a Router, from one device to another with Fault Tolerance in mind for reliability. 
+17. How can we send data reliably even if the network is unreliable?
+Via the Transmission Control Protocol. The TCP manages the sending and receiving of data as packets, when the packets arrive, the TCP does a full inventory of packet receivable and will send a response whether data was fully received.
