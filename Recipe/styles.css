@@ -1,0 +1,35 @@
+body {
+    background-color: #E5E4E2;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #36454F;
+    font-family: 'Lobster Two', cursive;
+}
+
+p {
+    color: #253038;
+}
+
+.description {
+    width: 600px;
+}
+
+.left {
+    width: 600px; 
+    float: left;
+    text-align: left;
+}
+
+.right {
+    width: 600px;
+    float: left;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.display-3 {
+    background-color: #FDB196;
+}
