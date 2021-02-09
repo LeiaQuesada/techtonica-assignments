@@ -7,5 +7,5 @@ Extensions:
 Add a box where the user can say how many coins they want to flip. Then display that many coins and flip them all randomly.
 */
 
+let coinFlips = document.getElementById("flipCount");
 
-let flipCount = window.prompt("How many chances would you like to win Milton's favor? ");
