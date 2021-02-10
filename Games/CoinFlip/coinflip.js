@@ -7,5 +7,17 @@ Extensions:
 Add a box where the user can say how many coins they want to flip. Then display that many coins and flip them all randomly.
 */
 
-let coinFlips = document.getElementById("flipCount");
+let coinFlips = document.getElementById("flipCount").value;
 
+// default behavior is clearing the submission 
+function(e) {
+    if (e.preventDefault) e.preventDefault();
+    return false;
+}
+
+let form = document.getElementById("game-form");
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
