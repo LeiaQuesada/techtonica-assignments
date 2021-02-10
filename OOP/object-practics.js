@@ -106,3 +106,26 @@ console.log(leia.getLastBook());
 // returnBook(bookId) removes the book with the given ID from the Borrower's list of books
 leia.returnBook(1543);
 console.log(leia.libraryBooks);
+
+
+function intersection(a, b){
+    // create accumulator array to be returned
+    let same = [];
+      // for loop to check elements of outter array
+      for (let i = 0; i < a.length; i++) {
+      // for loop to check ele of inner array 
+        for (let j = 0; j < b.length; j++) {
+          // check if outer array ele is in inner array
+          if (a[i] === b[j]) {
+          // if so, push ele into return array
+            same.push(b[j]);
+          }
+        }
+      }
+    console.log( same);
+  }
+  
+let a = ['A', 'B', 'Z'];
+let b = ['Z', 'X', 'Y'];
+
+intersection(a, b); 
