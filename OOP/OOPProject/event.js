@@ -8,4 +8,23 @@ allows a user to input a price range they are willing to pay to see what ticket 
 Create a few event objects
 Push the event objects into an array and use jQuery to display the list of events to an html page.
 
+Specific Things to Learn
+Creating event array.
+Iterating through the array.
+Displaying array items in HTML page.
+
 */
+
+class Event {
+    constructor(name, description) {
+        this.name = name;
+        this.description = description;
+        this.availableTickets = [];
+    }
+}
+
+// The below statement creates an object.
+const eventObj1 = new Event(
+  'KLOS Golden Gala',
+  'An evening with hollywood vampires'
+);
