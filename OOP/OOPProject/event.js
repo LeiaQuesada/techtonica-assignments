@@ -17,12 +17,23 @@ Displaying array items in HTML page.
 
 class Event {
     constructor(name, description) {
-        this.name = name;
-        this.description = description;
-        this.availableTickets = [];
+      this.name = name;
+      this.description = description;
+      this.availableTickets = [];
+    }
+    addAvailableTickets(type, price) {
+      // use Event's propert to store ticket types for the event
+      this.type = type;
+      this.price = price;
     }
 }
 
+class TicketType {
+    constructor(name, price) {
+      this.name = name;
+      this.price = price;
+    }
+}
 // The below statement creates an object.
 const eventObj1 = new Event(
   'KLOS Golden Gala',
@@ -37,7 +48,7 @@ const eventObj3 = new Event('Jenny Lewis', 'On the line tour 2019');
 const eventArray = new Array();
 
 // pushes single object to an array
-eventArray.push(eventObj1);
+// eventArray.push(eventObj1);
 
 // pushes multiple objects to an array at once
 eventArray.push(eventObj1, eventObj2, eventObj3);
@@ -46,9 +57,7 @@ eventArray.push(eventObj1, eventObj2, eventObj3);
 console.log(eventArray);
 
 //  jQuery code to iterate through it in the same js file
-// .each() is used to iterate through the array of objects. Above code represents the syntax to iterate using .each()
-// .html() is used to return the HTML code from jQuery to the target element of the HTML page.
-// event is the target element in the below code.
+// .html() is used to return the HTML code from jQuery to the target element of the HTML page. event is the target element in the below code.
 // Note that all jQuery methods in our examples are inside a document ready event. This is to prevent any jQuery code from running before the document is finished loading (is ready).
 $(document).ready(function () {
   let html = '';
@@ -58,4 +67,3 @@ $(document).ready(function () {
   // insert final html into #event...
   $('#event').html(html);
 });
-
