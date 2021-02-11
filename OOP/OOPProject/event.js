@@ -32,7 +32,7 @@ class Event {
       return this.availableTickets;
     }
     allTickets() {
-      this.addAvailableTickets.types;
+      this.addAvailableTickets.types = types;
       let str = "All tickets: ";
       let count = 1;
       for (let element in types) {
@@ -84,7 +84,7 @@ eventObj3.addAvailableTickets("Orchestra", 300);
 eventObj3.addAvailableTickets("Mezzanine", 200);
 eventObj3.addAvailableTickets("Balcony", 100);
 
-console.log(eventObj1.availableTickets);
+console.log(eventObj1.allTickets());
 
 //  jQuery code to iterate through it in the same js file
 // Note that all jQuery methods in our examples are inside a document ready event. This is to prevent any jQuery code from running before the document is finished loading (is ready).
@@ -93,7 +93,7 @@ $(document).ready(function () {
   let html = '';
   // .each() is used to iterate through the array of objects.
   $.each(eventArray, function (index, item) {
-    html += `<li>${item.name} - ${item.description}</li>`;
+    html += `<li>${item.name} - ${item.description}  </li>`;
   });
   // insert final html into #event...
   $('#event').html(html);
