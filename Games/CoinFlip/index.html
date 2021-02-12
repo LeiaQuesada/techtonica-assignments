@@ -9,20 +9,22 @@
   <body>
     <h1> It's A Toss Up! </h1>
 
-    <div id="image">
-      <img src="./static/loveOAttack.jpg" alt="Cartoon image of hands rubbing a grey cat's chest. Cat has furrowed brow and thought bubble with image of cat tossing a coin and saying 'Okay, heads is purr, tails is attack.'"><br>
-      <a href="https://www.meowingtons.com/blogs/milton-the-cat-daily-comic/coin-flip-belly-rubs">Image from Meowingtons.com</a>
-    </div>
+    <div class="display">
+      <div id="image">
+        <img src="./static/loveOAttack.jpg" alt="Cartoon image of hands rubbing a grey cat's chest. Cat has furrowed brow and thought bubble with image of cat tossing a coin and saying 'Okay, heads is purr, tails is attack.'"><br>
+        <a href="https://www.meowingtons.com/blogs/milton-the-cat-daily-comic/coin-flip-belly-rubs">Image from Meowingtons.com</a>
+      </div>
 
-    <div class="description">
-      <p id="userAlert">Milton is a finniky one. Let's help Milton decide how to react to your lovings via some rando coin toss results!! Whoop whoop!</p>
+      <div class="description">
+        <p id="userAlert">Milton is a finniky one. Let's help Milton decide how to react to your lovings via some rando coin toss results!! Whoop whoop!</p>
 
-      <!-- ay sus -->
-      <form id="game-form" action="JavaScript:void(0)">
-        <label for="flipCount">How many chances would you like to win Milton's favor?</label><br>
-        <input type="number" id="flipCount" name="flipCount"><br>
-        <input type="submit" id="entered" value="Love me back!">
-      </form>
+        <!-- ay sus -->
+        <form id="game-form" action="JavaScript:void(0)">
+          <label for="flipCount">How many chances would you like to win Milton's favor?</label><br>
+          <input type="number" id="flipCount" name="flipCount" min="0" max="13"><br>
+          <input type="submit" id="entered" value="Love me back!">
+        </form>
+      </div>
     </div>
 
     <script src="./static/coinflip.js"></script>
