@@ -10,7 +10,8 @@ Add a box where the user can say how many coins they want to flip. Then display 
 const coinFlips = document.getElementById("numberChosen");
 const image = document.getElementById("image");
 const userResultAlert = document.getElementById("userAlert");
-const display = document.getElementsByClassName("display");
+const result = document.getElementsByClassName("results");
+const buttonLabel = document.getElementsByTagName("label");
 
 
 document.getElementById("game-form").onsubmit = () => {
@@ -26,19 +27,17 @@ document.getElementById("game-form").onsubmit = () => {
         if (randomNum === 1) {
             // display heads coin   
             console.log("Did this work? " + randomNum);
-            window.setTimeOut(image.innerHTML='<img src="./static/head.png>" alt="For this turn, you got heads!>', delay (seconds * 1000));
+            // window.setTimeOut(image.innerHTML= '<img src="./static/head.png>" alt="For this turn, you got heads!>', delay (seconds * 1000));
             heads++
         } else
         if (randomNum === 2) {
             // display tails coin
             console.log("How about this? " + randomNum);
-            window.setTimeOut(image.innerHTML='<img src="./static/tail.png>" alt="Oh dear, for this turn, you got tails!>', delay (seconds * 1000));
+            // window.setTimeOut(image.innerHTML='<img src="./static/tail.png>" alt="Oh dear, for this turn, you got tails!>', delay (seconds * 1000));
             tails++;
         }
     }
     // if heads result === tails result 
-    console.log(heads);
-    console.log(tails);
     if (heads === tails) {
         // restart? undecided? milton meh?
 
@@ -58,8 +57,6 @@ document.getElementById("game-form").onsubmit = () => {
 
     }
     // create a reset game button. 
-
-
 };
 
 // accessibility considerations: make submission and text LARGER!!!!
