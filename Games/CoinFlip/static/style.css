@@ -1,0 +1,44 @@
+
+
+html {
+	border-top: 20px solid #8A85A5; 
+	/* border-top: 65px solid #2d263d; */
+}
+
+/***********************************************
+Body styling 
+***********************************************/
+
+body {
+	/* max-width: 600px; */
+	margin: 0 auto;
+	padding: 20px 20px;
+	line-height: 1.6em;
+    font-family: 'Open Sans', sans-serif;
+	color: rgb(68, 54, 54);
+	font-weight: 300;
+	background: #abc7c7;
+}
+
+/***********************************************
+Image styling 
+***********************************************/
+
+img {
+	border-radius: 18%;
+    align-content: center;
+	max-width: 600px;
+	border-style: solid;
+	padding: auto;
+}
+
+/*
+img {
+    width: 50%;
+}
+
+@media (max-width: 1080px) {
+    img {
+        width: 100%;
+}
+*/
