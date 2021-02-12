@@ -1,7 +1,7 @@
 
 
 html {
-	border-top: 20px solid #8A85A5; 
+	border-top: 50px solid #8A85A5; 
 	/* border-top: 65px solid #2d263d; */
 }
 
@@ -27,18 +27,13 @@ Image styling
 img {
 	border-radius: 18%;
     align-content: center;
-	max-width: 600px;
+	max-width: 1000px;
 	border-style: solid;
 	padding: auto;
-}
-
-/*
-img {
-    width: 50%;
 }
 
 @media (max-width: 1080px) {
     img {
         width: 100%;
+	}
 }
-*/
