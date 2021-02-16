@@ -12,6 +12,8 @@ const image = document.getElementById("image");
 const userResultAlert = document.getElementById("userAlert");
 const result = document.getElementsByClassName("results");
 const buttonLabel = document.getElementsByTagName("label");
+const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
+
 
 
 document.getElementById("game-form").onsubmit = () => {
@@ -28,6 +30,7 @@ document.getElementById("game-form").onsubmit = () => {
             // display heads coin   
             console.log("Did this work? " + randomNum);
             // window.setTimeOut(image.innerHTML= '<img src="./static/head.png>" alt="For this turn, you got heads!>', delay (seconds * 1000));
+
             heads++
         } else
         if (randomNum === 2) {
@@ -41,12 +44,12 @@ document.getElementById("game-form").onsubmit = () => {
     if (heads === tails) {
         // restart? undecided? milton meh?
 
-    // if heads results are greater than tails
+        // if heads results are greater than tails
     } else
     if (heads > tails) {
         // congratulate player
         userResultAlert.textContent = "Roses are Red, violets are Blue, Milton LOVES you!!!";
-    
+        replace(ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
         // play video of cute cat with big eyes about to jump at screen, cute cat purring, some loving image with a cat
 
     // if tails results are greater
