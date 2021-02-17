@@ -11,9 +11,15 @@ class Eventonica {
     // Update existing Event
   }
 
-  deleteEvent() {
+  deleteEvent(id) {
     // Deletes Event
-
+    // look through array of Events
+    // for (let element in Event.all) {
+    //   // if id matches event element's id
+    //   // remove entire element
+    // }
+    Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
+    localStorage.removeItem(this.id);
   }
 
   findEventsByDate() {
@@ -63,6 +69,7 @@ class User {
 
   constructor() {
     this.id = User._nextId++;
+    this._name = name;
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
