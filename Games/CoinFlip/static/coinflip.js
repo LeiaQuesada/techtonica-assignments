@@ -29,6 +29,7 @@ document.getElementById("game-form").onsubmit = () => {
         if (randomNum === 1) {
             // display heads coin   
             console.log("Did this work? " + randomNum);
+            // change image displayed, get element, remove it, replace it
             // window.setTimeOut(image.innerHTML= '<img src="./static/head.png>" alt="For this turn, you got heads!>', delay (seconds * 1000));
 
             heads++
@@ -43,7 +44,7 @@ document.getElementById("game-form").onsubmit = () => {
     // if heads result === tails result 
     if (heads === tails) {
         // restart? undecided? milton meh?
-
+        userResultAlert.textContent = "Roses are Red, violets are Blue, a tie makes Milton indecisive about you... Choose another number of chances to Try again?";
         // if heads results are greater than tails
     } else
     if (heads > tails) {
