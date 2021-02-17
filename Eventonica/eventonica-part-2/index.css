@@ -2,7 +2,10 @@ fieldset {
   border: none;
   margin: 1rem 0;
 }
-
+body {
+  font-family: 'Truculenta', sans-serif;
+  background-color: rgb(247, 247, 218);
+}
 header {
   /* For more about flexbox, see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
   display: flex;
@@ -17,7 +20,6 @@ header img {
 main {
   display: flex;
   justify-content: space-between;
-  font-family: 'Truculenta', sans-serif;
 }
 
 aside {
