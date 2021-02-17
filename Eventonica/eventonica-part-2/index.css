@@ -17,6 +17,7 @@ header img {
 main {
   display: flex;
   justify-content: space-between;
+  font-family: 'Truculenta', sans-serif;
 }
 
 aside {

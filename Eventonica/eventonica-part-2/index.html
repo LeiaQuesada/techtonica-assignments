@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="./calendar.png" />
     <script defer src="models.js"></script>
     <script defer src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -67,7 +69,11 @@
             <form id="add-user" action="#">
               <fieldset>
                 <label>Name</label>
-                <input type="text" id="add-user-name" />
+                <input 
+                  type="text" 
+                  id="add-user-name" 
+                  placeholder="Preferred Name"
+                />
               </fieldset>
 
               <!-- Add more form fields here -->
@@ -94,7 +100,7 @@
           <form id="search" action="#">
             <fieldset>
               <label for="date-search">Date</label>
-              <input type="text" id="date-search" placeholder="YYYY-MM-DD" />
+              <input type="date" id="date-search" placeholder="YYYY-MM-DD" />
             </fieldset>
             <fieldset>
               <label for="category-search">Category</label>
