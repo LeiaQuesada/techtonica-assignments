@@ -75,3 +75,6 @@ class User {
 if (typeof module !== "undefined") {
   module.exports = { Eventonica, User, Event };
 }
+
+new Event('Example event');
+new User('Alex');
