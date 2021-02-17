@@ -50,7 +50,7 @@ document.getElementById("game-form").onsubmit = () => {
     if (heads > tails) {
         // congratulate player
         userResultAlert.textContent = "Roses are Red, violets are Blue, Milton LOVES you!!!";
-        replace(ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
+        // replace(ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
         // play video of cute cat with big eyes about to jump at screen, cute cat purring, some loving image with a cat
 
     // if tails results are greater
