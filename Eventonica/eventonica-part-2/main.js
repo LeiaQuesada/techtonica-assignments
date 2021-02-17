@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   addEventForm.addEventListener("submit", (submitEvent) => {
     submitEvent.preventDefault();
     const name = document.querySelector("#add-event-name").value;
-    const event = app.addEvent(name);
+    // capture date value and append to event obj?
+    const date = document.querySelector("#add-event-date").value;
+    // pass in name and date of event
+    const event = app.addEvent(name, date);
+
     console.log("Added event", event);
     refreshEventsList();
     addEventForm.reset();

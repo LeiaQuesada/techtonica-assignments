@@ -1,10 +1,7 @@
-/**
- * Paste your code from Part 1 into this file but keep the module check at the very end.
- * (The following is a just a small subset for the Add Event form on the example page to work)
- */
 class Eventonica {
   addEvent(/* arguments you decide go here */) {
     // Adds a new Event
+    
   }
 
   updateEvent() {
@@ -16,9 +13,10 @@ class Eventonica {
     // look through array of Events
     // for (let element in Event.all) {
     //   // if id matches event element's id
-    //   // remove entire element
+    //   // remove entire element with .removeChild() ?
     // }
     Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
+    
     localStorage.removeItem(this.id);
   }
 
@@ -44,16 +42,20 @@ class Eventonica {
 }
 
 class Event {
-  // static is a way to include data that is shared across all instances of your class
+  // static is a way to include data that is shared across all instances of your class, aka shared
   static all = [];
   static _nextId = 100;
 
-  constructor() {
+  constructor(name, date) {
     this.id = Event._nextId++;
+    this.name = name;
+    this.date = date;
+    console.log(this.date);
     // decide what properties are required
     Event.all.push(this); // keep track of all created instances
   }
 
+  
   static findByDate() {
     return [];
   }
@@ -67,14 +69,14 @@ class User {
   static all = [];
   static _nextId = 200;
 
-  constructor() {
+  constructor(name) {
     this.id = User._nextId++;
-    this._name = name;
+    this.name = name;
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
 
-  // createFavorite() {
+  // favoriteEvent() {
   //   //
   // }
 }
