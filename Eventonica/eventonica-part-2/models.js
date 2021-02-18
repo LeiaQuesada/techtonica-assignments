@@ -1,7 +1,7 @@
 class Eventonica {
-  addEvent(/* arguments you decide go here */) {
+  addEvent(name, date, category) {
     // Adds a new Event
-    
+    new Event(name, date, category);
   }
 
   updateEvent() {
@@ -18,16 +18,16 @@ class Eventonica {
 
     Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
 
-    localStorage.removeItem(this.id);
+    // localStorage.removeItem(this.id);
   }
 
-  findEventsByDate() {
+  findEventsByDate(date) {
     // Return items in Event.all with a specified date
-
+    return Event.all.filter(event => event.date === date);
   }
 
   findEventsbyCategory() {
-    // Return items in Event.all with a specified category
+    // Return items in Event.findByCategory() with a specified category
     return Event.findByCategory(category);
   }
 
@@ -41,6 +41,16 @@ class Eventonica {
 
   deleteUser() {
     // Deletes User
+    let indexRem = User.all.map(user => user.id).indexOf(id)
+    //edge case
+    if(indexRem < 0) {
+      alert("this user doesn't exist");
+      break;
+    } else {
+      User.all.splice(indexRem, 1);
+      alert("User deleted.");
+      break;
+    }
   }
 }
 
