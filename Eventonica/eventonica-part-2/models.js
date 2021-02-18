@@ -28,6 +28,7 @@ class Eventonica {
 
   findEventsbyCategory() {
     // Return items in Event.all with a specified category
+    return Event.findByCategory(category);
   }
 
   addUser() {
@@ -63,8 +64,14 @@ class Event {
     return [];
   }
 
-  static findByCategory() {
-    return [];
+  static findByCategory(category) {
+    let categoryArray = [];
+    for (let i = 0; i < this.all.length; i++) {
+      if(this.all[i].category === category) {
+        categoryArray.push(this.all[i]);
+      }
+    }
+    return categoryArray;
   }
 }
 
