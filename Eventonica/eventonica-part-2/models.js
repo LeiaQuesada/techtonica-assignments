@@ -15,13 +15,15 @@ class Eventonica {
     //   // if id matches event element's id
     //   // remove entire element with .removeChild() ?
     // }
+
     Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
-    
+
     localStorage.removeItem(this.id);
   }
 
   findEventsByDate() {
     // Return items in Event.all with a specified date
+
   }
 
   findEventsbyCategory() {
@@ -46,17 +48,18 @@ class Event {
   static all = [];
   static _nextId = 100;
 
-  constructor(name, date) {
+  constructor(name, date, category) {
     this.id = Event._nextId++;
-    this.name = name;
-    this.date = date;
-    console.log(this.date);
+    this._name = name;
+    this._date = date;
+    this._category = category;
+    console.log(this._date);
     // decide what properties are required
     Event.all.push(this); // keep track of all created instances
   }
-
   
   static findByDate() {
+    
     return [];
   }
 
@@ -69,9 +72,13 @@ class User {
   static all = [];
   static _nextId = 200;
 
-  constructor(name) {
-    this.id = User._nextId++;
-    this.name = name;
+  constructor(firstName, lastName, userName, email, dob) {
+    this._id = User._nextId++;
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._userName = userName;
+    this._email = email;
+    this._dob = dob;
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
