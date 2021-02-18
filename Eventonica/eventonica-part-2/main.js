@@ -19,13 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle add event form submit by calling our instance of Eventonica, `app`
   addEventForm.addEventListener("submit", (submitEvent) => {
     submitEvent.preventDefault();
+    //capture input values and store in appropriate variables
     const name = document.querySelector("#add-event-name").value;
-    // capture date value and append to event obj?
     const date = document.querySelector("#add-event-date").value;
-    // pass in name and date of event
-    const event = app.addEvent(name, date);
+    const category = document.querySelector("#add-event-category").value;
+    // store event properties in event object
+    const event = app.addEvent(name, date, category);
 
-    console.log("Added event", event);
+    // console.log("Added event", event);
     refreshEventsList();
     addEventForm.reset();
   });
