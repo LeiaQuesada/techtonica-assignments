@@ -31,8 +31,9 @@ class Eventonica {
     return Event.findByCategory(category);
   }
 
-  addUser() {
+  addUser(firstName, lastName, userName, email, dob) {
     // Adds a new User
+    new User(firstName, lastName, userName, email, dob);
   }
 
   updateUser() {
@@ -69,9 +70,8 @@ class Event {
     Event.all.push(this); // keep track of all created instances
   }
   
-  static findByDate() {
-    
-    return [];
+  static findByDate(date) {
+    return Event.all.filter(event => event.date === date);
   }
 
   static findByCategory(category) {
