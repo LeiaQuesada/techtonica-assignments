@@ -46,11 +46,9 @@ class Eventonica {
     //edge case
     if(indexRem < 0) {
       alert("this user doesn't exist");
-      break;
     } else {
       User.all.splice(indexRem, 1);
       alert("User deleted.");
-      break;
     }
   }
 }
@@ -108,6 +106,3 @@ class User {
 if (typeof module !== "undefined") {
   module.exports = { Eventonica, User, Event };
 }
-
-new Event('Example event');
-new User('Alex');
