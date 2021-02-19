@@ -9,3 +9,5 @@ function invert(obj) {
     }
     return newObj;
 }
+module.exports = invert;
+// module.exports = { EventRecommender, User, Event}
