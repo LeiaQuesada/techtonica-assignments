@@ -8,12 +8,13 @@ Add a box where the user can say how many coins they want to flip. Then display 
 */
 
 const coinFlips = document.getElementById("numberChosen");
-const image = document.getElementById("image");
+const image = document.getElementsByClass("mainImage")[0];
 const userResultAlert = document.getElementById("userAlert");
-const result = document.getElementsByClassName("results");
+// const result = document.getElementsByClassName("results");
 const buttonLabel = document.getElementsByTagName("label");
 const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
-
+const loveImagesURL = ['<img src="./static/cat-love.png" alt="grey cartoon blushing cute cat with kissy face and a heart above it\'s head">', '"img src="./static/happy-cat.png" alt=""'];
+const madImagesURL = ['"./static/angry-cat.png"', '"./static/not-today-cat.png"'];
 
 
 document.getElementById("game-form").onsubmit = () => {
@@ -22,6 +23,11 @@ document.getElementById("game-form").onsubmit = () => {
     // random result of heads
     let heads = 0; // heads will be 1 for randomNum
     let tails = 0; // tails will be 2 for randomNum
+
+
+    //create a grid system to display the number of coins user wants to flip
+
+    // hide figure elements?
 
     // display heads or tails consecutively after each call to flip, add coins raining in the background later
     for (let i = 0; i <= flips; i++) {
