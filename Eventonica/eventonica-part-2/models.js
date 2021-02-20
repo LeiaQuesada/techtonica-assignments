@@ -15,9 +15,7 @@ class Eventonica {
     //   // if id matches event element's id
     //   // remove entire element with .removeChild() ?
     // }
-
     Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
-
     // localStorage.removeItem(this.id);
   }
 
@@ -40,16 +38,9 @@ class Eventonica {
     // Update existing User
   }
 
-  deleteUser() {
+  deleteUser(id) {
     // Deletes User
-    let indexRem = User.all.map(user => user.id).indexOf(id)
-    //edge case
-    if(indexRem < 0) {
-      alert("this user doesn't exist");
-    } else {
-      User.all.splice(indexRem, 1);
-      alert("User deleted.");
-    }
+    User.all = User.all.filter(user => user.id !== id);
   }
 }
 

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // change, add, or remove any events.
   const refreshEventsList = () => {
     document.querySelector("#events-list").innerHTML = Event.all
-      .map((event) => `<li>${event.name} on ${event.date} </li>`)
+      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} </li>`)
       .join("\n");
   };
 
@@ -35,8 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteEvent.preventDefault(); 
     // need to turn value into integer not string
     const eventToBeRemoved = parseInt(document.querySelector("#delete-event-id").value);
-    const removeEvent = app.deleteEvent(eventToBeRemoved);
-    console.log("Did this delete yet? id: ", eventToBeRemoved, removeEvent);
+    app.deleteEvent(eventToBeRemoved);
     refreshEventsList();
     deleteEventForm.reset();
   });
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Builds HTML list for all users
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
-      .map((user) => `<li>${user.userName}</li>`)
+      .map((user) => `<li>User: ${user.id}: ${user.userName}</li>`)
       .join("\n");
   };
 
@@ -60,5 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Added user", user);
     refreshUsersList();
     addUserForm.reset();
+  });
+
+  // delete user
+  const deleteUserForm = document.querySelector("#delete-user");
+  deleteUserForm.addEventListener("submit", (deleteUser) => {
+    deleteUser.preventDefault(); 
+    // need to turn value into integer not string
+    const userToBeRemoved = parseInt(document.querySelector("#delete-user-id").value);
+    const removeUser = app.deleteUser(userToBeRemoved);
+    refreshUsersList();
+    deleteUserForm.reset();
   });
 });
