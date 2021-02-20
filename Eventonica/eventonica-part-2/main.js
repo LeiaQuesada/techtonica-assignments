@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addEventForm.reset();
   });
 
+  // update event  
+
   // delete event
   const deleteEventForm = document.querySelector("#delete-event");
   deleteEventForm.addEventListener("submit", (deleteEvent) => {
@@ -39,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshEventsList();
     deleteEventForm.reset();
   });
+
+  // find events by date
+
+  // find events by category
 
   // Builds HTML list for all users
   const refreshUsersList = () => {
@@ -61,6 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addUserForm.reset();
   });
 
+  // update user
+
   // delete user
   const deleteUserForm = document.querySelector("#delete-user");
   deleteUserForm.addEventListener("submit", (deleteUser) => {
@@ -71,4 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshUsersList();
     deleteUserForm.reset();
   });
+
+  //update user 
 });
