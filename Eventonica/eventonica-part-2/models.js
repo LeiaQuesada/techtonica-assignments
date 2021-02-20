@@ -88,13 +88,12 @@ class User {
   static all = [];
   static _nextId = 200;
 
-  constructor(firstName, lastName, userName, email, dob) {
+  constructor(firstName, lastName, userName, email) {
     this.id = User._nextId++;
     this.firstName = firstName;
     this.lastName = lastName;
     this.userName = userName;
     this.email = email;
-    this.dob = dob;
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
@@ -103,6 +102,10 @@ class User {
   //   //
   // }
 }
+
+// example classes
+new Event('Example event');
+new User("", "",'Alex');
 
 if (typeof module !== "undefined") {
   module.exports = { Eventonica, User, Event };

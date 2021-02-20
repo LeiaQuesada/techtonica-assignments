@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // change, add, or remove any users?
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
-      .map((user) => `<li>${user.name}</li>`)
+      .map((user) => `<li>${user.userName}</li>`)
       .join("\n");
   };
 
@@ -44,8 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle add user form submit by calling our instance of Eventonica, `app`
   addUserForm.addEventListener("submit", (submitUser) => {
     submitUser.preventDefault();
-    const name = document.querySelector("#add-user-name").value;
-    const user = app.addUser(name);
+    const firstName = document.querySelector("#add-user-first-name").value;
+    const lastName = document.querySelector("#add-user-last-name").value;
+    const userName = document.querySelector("#add-user-name").value;
+    const email = document.querySelector("#add-user-email").value;
+    const user = app.addUser(firstName, lastName, userName, email);
     console.log("Added user", user);
     refreshUsersList();
     addUserForm.reset();
