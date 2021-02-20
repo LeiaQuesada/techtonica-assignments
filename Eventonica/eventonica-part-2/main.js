@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // change, add, or remove any events.
   const refreshEventsList = () => {
     document.querySelector("#events-list").innerHTML = Event.all
-      .map((event) => `<li>${event.name}</li>`)
+      .map((event) => `<li>${event.name} on ${event.date} </li>`)
       .join("\n");
   };
 

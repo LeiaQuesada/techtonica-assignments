@@ -60,12 +60,13 @@ class Event {
 
   constructor(name, date, category) {
     this.id = Event._nextId++;
-    this._name = name;
-    this._date = date;
-    this._category = category;
-    console.log(this._date);
+    this.name = name;
+    this.date = date;
+    this.category = category;
+    console.log(this.date);
     // decide what properties are required
     Event.all.push(this); // keep track of all created instances
+    console.log(this);
   }
   
   static findByDate(date) {
@@ -88,12 +89,12 @@ class User {
   static _nextId = 200;
 
   constructor(firstName, lastName, userName, email, dob) {
-    this._id = User._nextId++;
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._userName = userName;
-    this._email = email;
-    this._dob = dob;
+    this.id = User._nextId++;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.userName = userName;
+    this.email = email;
+    this.dob = dob;
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
