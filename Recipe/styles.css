@@ -9,8 +9,14 @@ h1, h2, h3 {
     font-family: 'Lobster Two', cursive;
 }
 
+img {
+    max-width: 600px;
+    margin: auto;
+}
+
 p {
     color: #253038;
+    width: 100%;
 }
 
 .description {
@@ -18,13 +24,14 @@ p {
 }
 
 .left {
-    width: 600px; 
+    width: 500px; 
     float: left;
     text-align: left;
+    margin-right: 100px;
 }
 
 .right {
-    width: 600px;
+    max-width: 500px;
     float: left;
     text-align: left;
     margin-left: 30px;
@@ -32,4 +39,27 @@ p {
 
 .display-3 {
     background-color: #FDB196;
+}
+
+@media all and (max-width: 480px) {
+    img, h1 {
+        width: 250px;
+    }
+    .description {
+        width: 280px;
+    }
+
+    body {
+        width: 100%;
+        margin: 10px;
+        padding: 0;
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .left, .right{
+        width: 100%;
+        margin: 10px;
+    }
 }
