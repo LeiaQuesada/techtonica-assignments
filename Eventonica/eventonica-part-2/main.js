@@ -43,8 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // find events by date
+  const searchByDateForm = document.querySelector("#date-search");
+  searchByDateForm.addEventListener("submit", (date) => {
+    date.preventDefault();
+    const matchingDate = document.querySelector("#date-search").value;
+    app.findEventsByDate(matchingDate); 
+  })
 
   // find events by category
+  const searchByCategoryForm = //
+
 
   // Builds HTML list for all users
   const refreshUsersList = () => {

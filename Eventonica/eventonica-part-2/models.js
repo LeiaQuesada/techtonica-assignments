@@ -4,19 +4,12 @@ class Eventonica {
     new Event(name, date, category);
   }
 
-  updateEvent() {
+  updateEvent(category) {
     // Update existing Event
   }
 
   deleteEvent(id) {
-    // Deletes Event
-    // look through array of Events
-    // for (let element in Event.all) {
-    //   // if id matches event element's id
-    //   // remove entire element with .removeChild() ?
-    // }
     Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
-    // localStorage.removeItem(this.id);
   }
 
   findEventsByDate(date) {
@@ -94,9 +87,8 @@ class User {
   // }
 }
 
-// example classes
-new Event('Example event');
-new User("", "",'Alex');
+// new Event(name, date, category);
+// new User(firstName, lastName, userName, email); 
 
 if (typeof module !== "undefined") {
   module.exports = { Eventonica, User, Event };
