@@ -1,13 +1,13 @@
-// Made a div
+// Makes a div
 const div = document.createElement("div");
 
-// added class Fower to it
+// adds class Flower to it
 div.classList.add("Flower");
 
-// appended this div to body of html
+// appends this div to body of html
 document.body.appendChild(div);
 
-// made an unordered list with any three items
+// made an unordered list with these three items
 const myList = `
 <ul>
     <li>Rose</li>
@@ -35,3 +35,7 @@ function toggleIt() {
 }
 
 img.addEventListener("dblclick", toggleIt);
+
+// Using the JavaScript documentation or other resources as your guide, add another div with class having an image, a paragraph describing the image and a button through javaScript.
+
+// Using the Javascript documentation or other resources as your guide, add a list in between the two divs using appropriate methods.

@@ -11,7 +11,7 @@ h1, h2, h3 {
 
 img {
     max-width: 600px;
-    margin: auto;
+    /* margin: auto; */
 }
 
 p {
@@ -45,6 +45,7 @@ p {
     img, h1 {
         width: 250px;
     }
+    
     .description {
         width: 280px;
     }
