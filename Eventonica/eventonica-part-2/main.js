@@ -6,6 +6,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Use this to call all the logic we already created
   const app = new Eventonica();
 
+  function editEvent(eventId) {
+    // look through event.all array, only need one event - use .find()
+    let event = Event.all.find(event => event.id === eventId)
+    // display the initially hidden edit field
+    let container = document.querySelector("#edit-event-container");
+    container.style.display = "inline";
+    // populate all fields with object's properties
+    document.querySelector("#edit-event-name").value = event.name;
+    document.querySelector("#edit-event-category").value = event.category;
+    document.querySelector("#edit-event-date").value = event.date;
+
+    document.querySelector("#edit-event").addEventListener("submit", (submitEvent) => {
+      event.name = document.querySelector("#edit-event-name").value;
+      event.date = document.querySelector("#edit-event-date").value;
+      event.category = document.querySelector("#edit-event-category").value;
+      // console.log("Added event", event);
+      refreshEventsList();
+      container.style.display = "none";
+  
+    })
+
+  }
+
   // Builds HTML list items for all event entries. You must call this function after you make changes
   const refreshEventsList = () => {
     document.querySelector("#events-list").innerHTML = Event.all
@@ -21,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let eventId = parseInt(event.target.id);
         // updateEvent.preventDefault(); 
-        app.updateEvent(eventId);
+        editEvent(eventId);
       });      
     }
   };
@@ -86,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // onclick, find which event id
         updateUserButtons[i].addEventListener("click", (user) => {
           
-          let userId = user.target.id;
+          let userId = parseInt(user.target.id);
           // updateEvent.preventDefault(); 
           app.updateUser(userId);
         });      
