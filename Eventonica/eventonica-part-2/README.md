@@ -27,4 +27,4 @@ By the end I'll have built a full-stack web app with React and a database.
 - A User can view their list of previously favorite events
 
 ## Image of Part 2 of Project Completion
-[![Eventonica Part Two Screen Shot]](eventonica-part-2/TakeTwo.png?raw=true)
+![Eventonica Part Two Screen Shot](eventonica-part-2/TakeTwo.png?raw=true)
