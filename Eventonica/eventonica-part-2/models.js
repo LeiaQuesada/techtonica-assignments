@@ -14,7 +14,7 @@ class Eventonica {
 
   findEventsByDate(date) {
     // Return items in Event.all with a specified date
-    return Event.all.filter(event => event.date === date);
+    return Event.findByDate(date);
   }
 
   findEventsbyCategory() {
@@ -53,10 +53,6 @@ class Event {
     console.log(this);
   }
   
-  static findByDate(date) {
-    return Event.all.filter(event => event.date === date);
-  }
-
   static findByCategory(category) {
     let categoryArray = [];
     for (let i = 0; i < this.all.length; i++) {
@@ -87,8 +83,8 @@ class User {
   // }
 }
 
-// new Event(name, date, category);
-// new User(firstName, lastName, userName, email); 
+const party = new Event("name", "2021-02-11", "category");
+const leia =  new User("firstName", "lastName", "userName", "email"); 
 
 if (typeof module !== "undefined") {
   module.exports = { Eventonica, User, Event };

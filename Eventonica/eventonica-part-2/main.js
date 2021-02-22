@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const event = app.addEvent(name, date, category);
     // console.log("Added event", event);
     refreshEventsList();
-    addEventForm.reset();
+    // addEventForm.reset();
   });
 
   // update event  
@@ -41,17 +41,23 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshEventsList();
     deleteEventForm.reset();
   });
-
-  // find events by date
-  const searchByDateForm = document.querySelector("#date-search");
+  const searchByDateForm = document.querySelector("#search");
   searchByDateForm.addEventListener("submit", (date) => {
+    console.log("date submit");
     date.preventDefault();
     const matchingDate = document.querySelector("#date-search").value;
-    app.findEventsByDate(matchingDate); 
-  })
+    let filteredByDate = Event.all.filter(event => event.date === matchingDate);
+    document.querySelector("#search-list").innerHTML = filteredByDate
+      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} </li>`)
+      .join("\n");
+    // searchByDateForm.reset();
+    console.log("filteredByDate: ", filteredByDate, matchingDate);
+  });
+
+
 
   // find events by category
-  const searchByCategoryForm = //
+  // const searchByCategoryForm = //
 
 
   // Builds HTML list for all users
@@ -70,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const userName = document.querySelector("#add-user-name").value;
     const email = document.querySelector("#add-user-email").value;
     const user = app.addUser(firstName, lastName, userName, email);
-    console.log("Added user", user);
     refreshUsersList();
     addUserForm.reset();
   });
@@ -88,5 +93,4 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteUserForm.reset();
   });
 
-  //update user 
 });
