@@ -20,11 +20,13 @@ By the end I'll have built a full-stack web app with React and a database.
 - Search for events by date
 - Search for events by category
 
+<!---
 ### Favorite Events
 
 - A User can **favorite** an Event
 - A User can **unfavorite** an Event
 - A User can view their list of previously favorite events
+-->
 
 ### File References
 
