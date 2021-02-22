@@ -8,7 +8,6 @@ class Eventonica {
     // "update-event-${event.id}"
     // look through event.all array
     Event.all.filter(event => event.id === eventId);
-    console.log(eventId);
   }
 
   deleteEvent(id) {
@@ -30,8 +29,9 @@ class Eventonica {
     new User(firstName, lastName, userName, email, dob);
   }
 
-  updateUser() {
+  updateUser(userId) {
     // Update existing User
+    User.all.filter(user => user.id === userId);
   }
 
   deleteUser(id) {

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Builds HTML list items for all event entries. You must call this function after you make changes
   const refreshEventsList = () => {
     document.querySelector("#events-list").innerHTML = Event.all
-      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} <button class="update-event" id="${event.id}">Update</button></li>`)
+      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} <button class="update-event" id="${event.id}">Edit</button></li>`)
       .join("\n");
     // update event
     const updateEventButtons = document.querySelectorAll(".update-event");
@@ -78,8 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Builds HTML list items for all user entries. You must call this function after you make changes
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
-      .map((user) => `<li>User: ${user.id}: ${user.userName} <button id="${user.id}">Update</button></li>`)
-      .join("\n");
+      .map((user) => `<li>User: ${user.id}: ${user.userName} <button class="update-user" id="${user.id}">Edit</button></li>`)
+      .join("\n");    
+      // update user
+      const updateUserButtons = document.querySelectorAll(".update-user");
+      for (let i = 0; i < updateUserButtons.length; i++) {
+        // onclick, find which event id
+        updateUserButtons[i].addEventListener("click", (user) => {
+          
+          let userId = user.target.id;
+          // updateEvent.preventDefault(); 
+          app.updateUser(userId);
+        });      
+      }
   };
 
   // Handle add user form submit
@@ -94,9 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshUsersList();
     addUserForm.reset();
   });
-
-  // update user
-
 
   // delete user
   const deleteUserForm = document.querySelector("#delete-user");
