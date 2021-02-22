@@ -17,16 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#edit-event-category").value = event.category;
     document.querySelector("#edit-event-date").value = event.date;
 
+    // update event's edited values 
     document.querySelector("#edit-event").addEventListener("submit", (submitEvent) => {
       event.name = document.querySelector("#edit-event-name").value;
       event.date = document.querySelector("#edit-event-date").value;
       event.category = document.querySelector("#edit-event-category").value;
-      // console.log("Added event", event);
       refreshEventsList();
+      // hide edit fields after submitting edits
       container.style.display = "none";
-  
     })
-
   }
 
   // Builds HTML list items for all event entries. You must call this function after you make changes
@@ -36,12 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("\n");
     // update event
     const updateEventButtons = document.querySelectorAll(".update-event");
-
-    console.log(updateEventButtons);
     for (let i = 0; i < updateEventButtons.length; i++) {
-      // onclick, find which event id
+      // find which event matches id onclick
       updateEventButtons[i].addEventListener("click", (event) => {
-        
         let eventId = parseInt(event.target.id);
         // updateEvent.preventDefault(); 
         editEvent(eventId);
@@ -98,6 +94,30 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("\n");
   });
 
+  // function to edit and save changes
+  function editUser(userId) {
+    // look through User.all array, only need one user - use .find()
+    let user = User.all.find(user => user.id === userId)
+    // display the initially hidden edit field
+    let container = document.querySelector("#edit-user-container");
+    container.style.display = "inline";
+    // populate all fields with object's properties
+    document.querySelector("#edit-user-first-name").value = user.firstName;
+    document.querySelector("#edit-user-last-name").value = user.lastName;
+    document.querySelector("#edit-user-name").value = user.userName;
+    document.querySelector("#edit-user-email").value = user.email;
+
+    // update user's edited values 
+    document.querySelector("#edit-user").addEventListener("submit", (submitUser) => {
+      user.firstName = document.querySelector("#edit-user-name").value;
+      user.lastName = document.querySelector("#edit-user-date").value;
+      user.userName = document.querySelector("#edit-user-category").value;
+      user.email = document.querySelector("#edit-user-email").value;
+      refreshUsersList();
+      // hide edit fields after submitting edits
+      container.style.display = "none";
+    })
+  }
   // Builds HTML list items for all user entries. You must call this function after you make changes
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
@@ -108,10 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let i = 0; i < updateUserButtons.length; i++) {
         // onclick, find which event id
         updateUserButtons[i].addEventListener("click", (user) => {
-          
           let userId = parseInt(user.target.id);
           // updateEvent.preventDefault(); 
-          app.updateUser(userId);
+          editUser(userId);
         });      
       }
   };
