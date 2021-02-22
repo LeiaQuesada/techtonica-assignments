@@ -83,7 +83,7 @@ class User {
   // }
 }
 
-const party = new Event("name", "2021-02-11", "category");
+const party = new Event("Event Name", "2021-02-14", "Event Category");
 const leia =  new User("firstName", "lastName", "userName", "email"); 
 
 if (typeof module !== "undefined") {

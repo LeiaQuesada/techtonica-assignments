@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Builds HTML list for all users
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
-      .map((user) => `<li>User: ${user.id}: ${user.userName}</li>`)
+      .map((user) => `<li>User: ${user.id}: ${user.userName}</li><`)
       .join("\n");
   };
 

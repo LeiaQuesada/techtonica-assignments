@@ -74,7 +74,7 @@
         <!-- consider different name -->
         <section class="user-management">
           <h2>User Management</h2>
-
+          <h3>All Users</h3>
           <ul id="users-list">
             <!-- displays all existing Users here -->
             <li>...</li>
@@ -85,31 +85,26 @@
             <h3>Add User</h3>
             <form id="add-user" action="#">
               <fieldset>
-                <label>First Name</label>
+                <label>Enter User Details</label>
+                <br>
                 <input 
                   type="text" 
                   id="add-user-first-name" 
                   placeholder="First Name"
                 />
-              </fieldset>
-              <fieldset>
-                <label>Last Name</label>
+                <!-- <label>Last Name</label> -->
                 <input 
                   type="text" 
                   id="add-user-last-name" 
                   placeholder="Last Name"
-                />
-              </fieldset>              
-              <fieldset>
-                <label>User Name</label>
+                /> 
+                <!-- <label>User Name</label> -->
                 <input 
                   type="text" 
                   id="add-user-name" 
                   placeholder="Preferred User Name"
                 />
-              </fieldset>              
-              <fieldset>
-                <label>Email</label>
+                <!-- <label>Email</label> -->
                 <input 
                   type="text" 
                   id="add-user-email" 
@@ -117,6 +112,9 @@
                 />
               </fieldset>
               <input type="submit" value="Add" />
+
+              <input type="submit" value="Edit" />
+
             </form>
           </div>
 
@@ -134,7 +132,6 @@
         </section>
       </div>
 
-
       <aside class="search-toolbar">
         <div>
           <h3>Find Events</h3>
@@ -146,21 +143,19 @@
 
           <form id="search" action="#">
             <fieldset>
+              <h4>Search By</h4>
               <label for="date-search">Date</label>
               <input type="date" id="date-search" placeholder="MM-DD-YYYY" />
-
-            </fieldset>
-            <input type="submit" />
-
-            <fieldset>
+              <input type="submit" />
+              <br>
               <label for="category-search">Category</label>
-              <input type="text" id="category-search" />
+              <input type="text" id="category-search" placeholder="Category" />
+              <input type="submit" value="Search" />
             </fieldset>
-
-            <input type="submit" value="Search" />
           </form>
         </div>
       </aside>
+
     </main>
 
     <footer>

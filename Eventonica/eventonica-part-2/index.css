@@ -14,7 +14,6 @@ header {
   align-items: center;
 }
 
-
 header img {
   height: 64px;
   margin-right: 1em;
@@ -22,7 +21,6 @@ header img {
 
 main {
   display: flex;
-  justify-content: space-between;
 }
 
 aside {
