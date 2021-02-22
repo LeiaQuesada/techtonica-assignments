@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // update user's edited values 
     document.querySelector("#edit-user").addEventListener("submit", (submitUser) => {
-      user.firstName = document.querySelector("#edit-user-name").value;
-      user.lastName = document.querySelector("#edit-user-date").value;
-      user.userName = document.querySelector("#edit-user-category").value;
+      user.firstName = document.querySelector("#edit-user-first-name").value;
+      user.lastName = document.querySelector("#edit-user-last-name").value;
+      user.userName = document.querySelector("#edit-user-name").value;
       user.email = document.querySelector("#edit-user-email").value;
       refreshUsersList();
       // hide edit fields after submitting edits
