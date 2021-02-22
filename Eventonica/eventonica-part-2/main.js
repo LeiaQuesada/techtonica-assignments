@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshEventsList();
     deleteEventForm.reset();
   });
+
   const searchByDateForm = document.querySelector("#search");
   searchByDateForm.addEventListener("submit", (date) => {
-    console.log("date submit");
     date.preventDefault();
     const matchingDate = document.querySelector("#date-search").value;
     let filteredByDate = Event.all.filter(event => event.date === matchingDate);
@@ -51,14 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} </li>`)
       .join("\n");
     // searchByDateForm.reset();
-    console.log("filteredByDate: ", filteredByDate, matchingDate);
+    // console.log("filteredByDate: ", filteredByDate, matchingDate);
   });
 
-
-
   // find events by category
-  // const searchByCategoryForm = //
-
+  const searchByCategoryForm = document.querySelector("#search");
+  searchByCategoryForm.addEventListener("submit", (category) => {
+    category.preventDefault();
+    const matchingCategory = document.querySelector("#category-search").value;
+    let filteredByCategory = Event.all.filter(event => event.category === matchingCategory);
+    document.querySelector("#search-list").innerHTML = filteredByCategory
+      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} </li>`)
+      .join("\n");
+  });
 
   // Builds HTML list for all users
   const refreshUsersList = () => {
