@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // look through event.all array, only need one event - use .find()
     let event = Event.all.find(event => event.id === eventId)
     // display the initially hidden edit field
+    console.log(event);
     let container = document.querySelector("#edit-event-container");
     container.style.display = "inline";
     // populate all fields with object's properties
@@ -19,13 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // update event's edited values 
     document.querySelector("#edit-event").addEventListener("submit", (submitEvent) => {
+      // EVENT LISTENER KEEPS LISTENING
+      submitEvent.preventDefault(); // what does this do?
+      // figure out 
+      console.log("Before changes entered: ", submitEvent);
       event.name = document.querySelector("#edit-event-name").value;
       event.date = document.querySelector("#edit-event-date").value;
       event.category = document.querySelector("#edit-event-category").value;
+      console.log("After changes entered: ", submitEvent);
       refreshEventsList();
       // hide edit fields after submitting edits
       container.style.display = "none";
     })
+      console.log(Event.all);
+
   }
 
   // Builds HTML list items for all event entries. You must call this function after you make changes
@@ -40,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateEventButtons[i].addEventListener("click", (event) => {
         let eventId = parseInt(event.target.id);
         // updateEvent.preventDefault(); 
+        console.log(eventId);
         editEvent(eventId);
       });      
     }

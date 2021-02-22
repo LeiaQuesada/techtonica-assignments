@@ -19,9 +19,9 @@ header img {
   margin-right: 1em;
 }
 
-main {
+/* main {
   display: flex;
-}
+} */
 
 aside {
   margin-left: 2em;
@@ -40,3 +40,19 @@ footer {
 #edit-user-container {
   display: none;
 }
+
+.user-and-events {
+  display: flex;
+}
+
+.event-management {
+  border: 1px solid blue;
+  flex-shrink: 1;
+  width: 50%;
+}
+
+.user-management {
+  flex-shrink: 1;
+  border: 1px solid blue;
+}
+
