@@ -26,5 +26,11 @@ By the end I'll have built a full-stack web app with React and a database.
 - A User can **unfavorite** an Event
 - A User can view their list of previously favorite events
 
+### File References
+
+- Model file can be found at `models.js`
+- View files can be found at `index.html` and `index.css`
+- Controller file or event handlers for the DOM is `main.js`
+
 ## Image of Part 2 of Project Completion
 ![Eventonica ScreenShot](TakeTwo.png?raw=true)
