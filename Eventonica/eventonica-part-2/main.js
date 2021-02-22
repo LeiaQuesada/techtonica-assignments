@@ -6,12 +6,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Use this to call all the logic we already created
   const app = new Eventonica();
 
-  // Builds HTML list for all event. You must call this function after you
-  // change, add, or remove any events.
+  // Builds HTML list items for all event entries. You must call this function after you make changes
   const refreshEventsList = () => {
     document.querySelector("#events-list").innerHTML = Event.all
-      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} </li>`)
+      .map((event) => `<li>${event.id}: ${event.name} of ${event.category} on ${event.date} <button class="update-event" id="${event.id}">Update</button></li>`)
       .join("\n");
+    // update event
+    const updateEventButtons = document.querySelectorAll(".update-event");
+
+    console.log(updateEventButtons);
+    for (let i = 0; i < updateEventButtons.length; i++) {
+      // onclick, find which event id
+      updateEventButtons[i].addEventListener("click", (event) => {
+        
+        let eventId = event.target.id;
+        // updateEvent.preventDefault(); 
+        app.updateEvent(eventId);
+      });      
+    }
   };
 
   // Handle add event form submit
@@ -28,8 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshEventsList();
     // addEventForm.reset();
   });
-
-  // update event  
 
   // delete event
   const deleteEventForm = document.querySelector("#delete-event");
@@ -65,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("\n");
   });
 
-  // Builds HTML list for all users
+  // Builds HTML list items for all user entries. You must call this function after you make changes
   const refreshUsersList = () => {
     document.querySelector("#users-list").innerHTML = User.all
-      .map((user) => `<li>User: ${user.id}: ${user.userName}</li><`)
+      .map((user) => `<li>User: ${user.id}: ${user.userName} <button id="${user.id}">Update</button></li>`)
       .join("\n");
   };
 
@@ -86,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // update user
+
 
   // delete user
   const deleteUserForm = document.querySelector("#delete-user");

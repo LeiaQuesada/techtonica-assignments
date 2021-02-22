@@ -4,8 +4,11 @@ class Eventonica {
     new Event(name, date, category);
   }
 
-  updateEvent(category) {
-    // Update existing Event
+  updateEvent(eventId) {
+    // "update-event-${event.id}"
+    // look through event.all array
+    Event.all.filter(event => event.id === eventId);
+    console.log(eventId);
   }
 
   deleteEvent(id) {
@@ -40,7 +43,7 @@ class Eventonica {
 class Event {
   // static is a way to include data that is shared across all instances of your class, aka shared
   static all = [];
-  static _nextId = 100;
+  static _nextId = 5432;
 
   constructor(name, date, category) {
     this.id = Event._nextId++;
@@ -54,19 +57,15 @@ class Event {
   }
   
   static findByCategory(category) {
-    let categoryArray = [];
-    for (let i = 0; i < this.all.length; i++) {
-      if(this.all[i].category === category) {
-        categoryArray.push(this.all[i]);
-      }
-    }
+    let categoryArray = Event.all.filter(event => event.category === category);
     return categoryArray;
   }
 }
 
 class User {
   static all = [];
-  static _nextId = 200;
+  static _nextId = 100;
+  static favorite = [];
 
   constructor(firstName, lastName, userName, email) {
     this.id = User._nextId++;
@@ -74,13 +73,10 @@ class User {
     this.lastName = lastName;
     this.userName = userName;
     this.email = email;
+    // this.favorite = [];
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
-
-  // favoriteEvent() {
-  //   //
-  // }
 }
 
 const party = new Event("Event Name", "2021-02-14", "Event Category");
