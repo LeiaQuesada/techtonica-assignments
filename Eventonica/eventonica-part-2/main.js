@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // onclick, find which event id
       updateEventButtons[i].addEventListener("click", (event) => {
         
-        let eventId = event.target.id;
+        let eventId = parseInt(event.target.id);
         // updateEvent.preventDefault(); 
         app.updateEvent(eventId);
       });      

@@ -5,9 +5,14 @@ class Eventonica {
   }
 
   updateEvent(eventId) {
-    // "update-event-${event.id}"
-    // look through event.all array
-    Event.all.filter(event => event.id === eventId);
+    // look through event.all array, only need one event - use .find()
+    let event = Event.all.find(event => event.id === eventId)
+    // display the initially hidden edit field
+    document.querySelector("#edit-event-container").style.display = "inline";
+    // populate all fields with object's properties
+    document.querySelector("#edit-event-name").value = event.name;
+    document.querySelector("#edit-event-category").value = event.category;
+    document.querySelector("#edit-event-date").value = event.date;
   }
 
   deleteEvent(id) {
