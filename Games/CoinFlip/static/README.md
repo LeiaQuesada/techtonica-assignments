@@ -23,5 +23,5 @@ By the end, I'll have built a reactive game!
 - View files can be found at `index.html` and `static/style.css`
 
 ## Image of Part 1 of Project Completion
-![Coin Flip ScreenShot](screenshot.pgn?raw=true)
+![CoinFlip ScreenShot](screenshot.png?raw=true)
 
