@@ -25,7 +25,7 @@ By the end, I'll have built dynamic apps!
 
 - Practice more extensive DOM manipulation and JS programming techniques such as OOP and FP.
 
-## Image of Part 1 of Projects 
+## Images of Initial Phases of Projects 
 
 ### Personal Profile
 ![profile screenshot](personal-profile-project/screenshot.png?raw=true)
