@@ -18,6 +18,11 @@ By the end I'll have built a cool website from scratch!
 
 - Project Highlights
 
+### Dev Tools Learned but not necessarily applied
+
+- MERN web development stack 
+    MongoDB, Express.js, React.js, Node.js
+
 ### File References
 
 - Home Page is at `index.html`
