@@ -1,7 +1,10 @@
-// console.log("I'm learning to use Node.js!");
+const http = require('http');
 
-function nodePractice() {
-    console.log("This is a test...");
-}
+const hostname = '127.0.0.1';
+const port = 3000;
 
-nodePractice();
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader = ('Content-type', 'text/plain');
+    res.end('Hello my Peoples!');
+});
