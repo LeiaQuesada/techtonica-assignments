@@ -72,5 +72,5 @@ const party = new Event("Event Name", "2021-02-14", "Event Category");
 const leia =  new User("firstName", "lastName", "userName", "email"); 
 
 if (typeof module !== "undefined") {
-  module.exports = { Eventonica, User, Event };
+  module.exports = { Eventonica, User, Event, party};
 }
