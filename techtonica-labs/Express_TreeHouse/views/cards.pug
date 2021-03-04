@@ -1,14 +1,8 @@
-doctype html
-html(lang="en")
-  head
-    title TreeHouse PUG exercises
-  body
-    header 
-      h1 PUG Templates to reuse code 
-      section#content
+extends layout.pug
+
+block content
+    section#content
         h2= prompt
         if hint
             p 
                 i Hint: #{hint}
-      footer
-        p 
