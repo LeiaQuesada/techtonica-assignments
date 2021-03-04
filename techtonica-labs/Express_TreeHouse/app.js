@@ -1,6 +1,10 @@
 const express = require('express');
+// npm install body-parser --save
+const bodyParser = require('body-parser');
+
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
 // npm install pug --save
 app.set('view engine', 'pug');
 
