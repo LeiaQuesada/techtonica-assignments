@@ -23,7 +23,10 @@ app.get('/event/5432', (req, res) => {
     res.send(models.party);
 })
 
+
+
 // we call the listen method on the server object (express server), passing in the port 3000 and the callback function as arguments. run node index.js which verifies the server is running 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 })
+
