@@ -7,7 +7,11 @@ html(lang="en")
       h1 PUG Templates to reuse code 
       section#content
         h2= prompt
-        p 
-            i Hint: #{hint}
+        if hint
+            p 
+                i Hint: #{hint}
+        else 
+            p (There is no hint.)
+
       footer
       p Oou how cool is this.. oh yea this is where you input those Lorem ipsum content. I really liked the cute cat ones that Naomi shared from Alex's link. 
