@@ -18,7 +18,7 @@ app.get('/cards', (req, res) => {
 });
 
 app.get('/hello', (res, req) => {
-    res.render('hello');
+    res.render('hello', { name: req.body.username });
 });
 
 app.post('/hello', (res, req) => {
