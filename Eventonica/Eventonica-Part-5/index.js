@@ -17,12 +17,41 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    // this call back will run when the client requests this route 
-    res.send('WELL THIS IS WORKING')
+    // returns all current events as a JSON response
+    res.send("<h1>Welcome to Eventonica</h1>");
 })
 
+//API endpoint that that
+app.get('/events', (req, res) => {
+        // returns all current events as a JSON response
+        res.send(models.Event.all);
+    })
+    .post('/events', function (req, res) {
+        res.send('Got a POST request')
+    })
+    .put('/events', function (req, res) {
+        res.send('Got a PUT request at /events')
+    })
+    .delete('/events', function (req, res) {
+        res.send('Got a DELETE request at /events')
+    })  
+
 //.get takes two params path, and callback. here it creates a route, using / routes to the root route
-app.get('/event/5432', (req, res) => {
+app.get('/event/party', (req, res) => {
     // this call back will run when the client requests this route 
     res.send(models.party);
 })
+
+app.get('/users', (req, res) => {
+    // returns all current events as a JSON response
+    res.send(models.User.all);
+})
+.post('/users', function (req, res) {
+    res.send('Got a POST request')
+})
+.put('/users', function (req, res) {
+    res.send('Got a PUT request at /users')
+})
+.delete('/users', function (req, res) {
+    res.send('Got a DELETE request at /users')
+})  
