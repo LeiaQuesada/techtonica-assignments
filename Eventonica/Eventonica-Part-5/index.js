@@ -8,9 +8,13 @@ const models = require('./models');
 // create app object by binding it to the top-level express() function exported by the Express module above
 const app = express();
 
-
 // binds port number we are listening for requests and responses on 
 const port = 3000;
+
+// we call the listen method on the server object (express server), passing in the port 3000 and the callback function as arguments. run node index.js which verifies the server is running 
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+})
 
 app.get('/', (req, res) => {
     // this call back will run when the client requests this route 
@@ -22,11 +26,3 @@ app.get('/event/5432', (req, res) => {
     // this call back will run when the client requests this route 
     res.send(models.party);
 })
-
-
-
-// we call the listen method on the server object (express server), passing in the port 3000 and the callback function as arguments. run node index.js which verifies the server is running 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-})
-
