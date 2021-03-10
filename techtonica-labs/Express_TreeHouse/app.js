@@ -25,7 +25,7 @@ app.post('/hello', (res, req) => {
     res.render('hello');
 });
 
-app.listen(3000, () +> {
+app.listen(3000, () => {
     console.log('This application is running on localhost:3000')
 })
 
