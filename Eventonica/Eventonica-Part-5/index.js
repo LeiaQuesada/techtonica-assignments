@@ -3,6 +3,16 @@ const express = require('express');
 
 const models = require('./models');
 
+// connect postgresql client
+const pg = require('pg');
+const pool = new pg.Pool({
+    user: 'leiaque',
+    host: '127.0.0.1',
+    database: 'Eventonica',
+    password: '',
+    port: '5432'
+});
+
 // binds a str containing the web address of our local server
 // const hostname = ('4.17.1');
 // create app object by binding it to the top-level express() function exported by the Express module above
