@@ -14,15 +14,13 @@ By the end I'll have built a full-stack web app with React and a database.
 
 (this section will be updated as understanding is clarified) 
 
-- The project depends on a running PostgreSQL server, this is how you install PostgreSQL. \
+- The project depends on a running PostgreSQL server, to install PostgreSQL: \
 -- run `brew install postgresql` 
 - Create the React application scaffolding \
 -- run `npx create-react-app eventonica`
-- Node server side dependencies \
-- Express to serve files \
+- Node server side dependencies: 
+-- Express API to serve files \
 -- run `npm install express`
-- Install React JS Library \
--- run `npx create-react-app eventonica` 
 
 ### Events and Users
 
