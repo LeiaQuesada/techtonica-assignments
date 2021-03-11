@@ -10,6 +10,16 @@ By the end I'll have built a full-stack web app with React and a database.
 
 ## Project Features
 
+(this section will be updated as understanding is clarified) 
+- Install Express to serve files \
+-- run `npm install express`
+- Install React JS Library \
+-- run `npx create-react-app eventonica` 
+- Install PostgresQL to store data \
+-- run `brew install postgresql`
+- Install PostgresQL client to connect database \
+-- run `npm install pg-promise`
+
 ### Events and Users
 
 - Add a new Event and/or User
