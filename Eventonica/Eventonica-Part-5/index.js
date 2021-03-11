@@ -3,21 +3,14 @@ const express = require('express');
 
 const models = require('./models');
 
-// connect postgresql client
-const pg = require('pg');
-const pool = new pg.Pool({
-    user: 'leiaque',
-    host: '127.0.0.1',
-    database: 'Eventonica',
-    password: '',
-    port: '5432'
-});
+// connect PostgreSQL client with PostgreSQL promise
+var pgp = require('pg-promise'); // (/* options */)
+var db = pgp('postgres://localhost:5432/Eventonica');
 
 // binds a str containing the web address of our local server
 // const hostname = ('4.17.1');
 // create app object by binding it to the top-level express() function exported by the Express module above
 const app = express();
-
 
 // binds port number we are listening for requests and responses on 
 const port = 3000;
