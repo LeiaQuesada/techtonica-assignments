@@ -2,15 +2,16 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const port = process.env.PORT || 3000;
+const { PORT, I_LOVE } = require('./config');
 
-// const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${port}...`);
 });
+
+console.log("I love ", I_LOVE);
 
 app.route('/customers')
   .get((req, res) => {
