@@ -1,36 +1,30 @@
 class Eventonica {
   addEvent(name, date, category) {
-    // Adds a new Event
     new Event(name, date, category);
   }
   
   deleteEvent(id) {
-    Event.all = Event.all.filter(event => event.id !== id); //thanks Alex!
+    Event.all = Event.all.filter(event => event.id !== id);
   }
 
   findEventsByDate(date) {
-    // Return items in Event.all with a specified date
     return Event.findByDate(date);
   }
 
   findEventsbyCategory() {
-    // Return items in Event.findByCategory() with a specified category
     return Event.findByCategory(category);
   }
 
   addUser(firstName, lastName, userName, email, dob) {
-    // Adds a new User
     new User(firstName, lastName, userName, email, dob);
   }
 
   deleteUser(id) {
-    // Deletes User
     User.all = User.all.filter(user => user.id !== id);
   }
 }
 
 class Event {
-  // static is a way to include data that is shared across all instances of your class, aka shared
   static all = [];
   static _nextId = 5432;
 
@@ -40,7 +34,7 @@ class Event {
     this.date = date;
     this.category = category;
     console.log(this.date);
-    // decide what properties are required
+
     Event.all.push(this); // keep track of all created instances
     console.log(this);
   }
